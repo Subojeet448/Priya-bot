@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Priya AI Bot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Priya AI Bot</h1>
+        <p>Your Intelligent Virtual Assistant with Social Features, Games & Shop!</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="users">0</div>
+                <div>Happy Users</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="messages">0</div>
+                <div>Messages</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="games">0</div>
+                <div>Games Played</div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>🤖 AI Chat</h3>
+                <p>Natural conversations in Hinglish</p>
+            </div>
+            <div class="feature-card">
+                <h3>👥 Social</h3>
+                <p>Connect with friends, chat directly</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛒 Shop</h3>
+                <p>Buy themes, features & power-ups</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎮 Games</h3>
+                <p>Play quiz, memory & challenges</p>
+            </div>
+            <div class="feature-card">
+                <h3>💰 Daily Rewards</h3>
+                <p>Get 1000 coins every day</p>
+            </div>
+            <div class="feature-card">
+                <h3>🏆 Achievements</h3>
+                <p>Earn badges and level up</p>
+            </div>
+        </div>
+        
+        <a href="https://t.me/codehelperforbot_bot" class="btn">🤖 Start Bot on Telegram</a>
+        
+        <div class="footer">
+            <a href="/login" style="color: white;">Admin Login</a> | 
+            <span>Version 3.0.0</span>
+        </div>
+    </div>
+    
+    <script>
+        // Simulate stats update
+        setInterval(() => {
+            document.getElementById('users').innerText = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('messages').innerText = Math.floor(10000 + Math.random() * 90000);
+            document.getElementById('games').innerText = Math.floor(500 + Math.random() * 4500);
+        }, 5000);
+    </script>
+</body>
+</html>
